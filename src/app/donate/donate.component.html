@@ -1,0 +1,89 @@
+<body>
+  <div class="container">
+    <h1>Donate</h1>
+    <form>
+      <label for="name">Name:</label>
+      <input id="newName" name="name" type="text" required>
+      <br>
+      <label for="message">Message:</label>
+      <textarea id="newMessage" name="message" required></textarea>
+      <br>
+      <label for="donation">Donation:</label>
+      <input id="newDonation" name="donation" type="number" required>
+      <br>
+      <button (click)="addDonate()">Donate</button>
+    </form>
+  </div>
+<h2>Donators</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Message</th>
+        <th>Donation</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let don of donate">
+        <td>{{ don.name }}</td>
+        <td>{{ don.message }}</td>
+        <td>Php {{ don.donation }}</td>
+        <td><button (click)="deleteDonate(don.id)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+
+
+
+
+
+
+
+
+<!-- <body>
+  <div class="container">
+    <h1>Donate</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Message</th>
+          <th>Donation</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input id="newName" placeholder="name"></td>
+          <td><input id="newMessage" placeholder="message"></td>
+          <td><input id="newDonation" placeholder="donation"></td>
+          <td><button (click)="addDonate()">Add Donation</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Message</th>
+      <th>Donation</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let don of donate">
+      <td>{{ don.name }}</td>
+      <td>{{ don.message }}</td>
+      <td>Php{{ don.donation }}</td>
+      <td><button (click)="deleteDonate(don.id)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
+
+</body> -->
